@@ -1,12 +1,17 @@
+import { useAppSelector } from '../app/hooks';
+
 import AddTodo from '../components/AddTodo/AddTodo';
-import Todo from '../components/Todo/Todo';
+import TodoItem from '../components/TodoItem/TodoItem';
 
 const TodoList: React.FC = (): JSX.Element => {
+  const todoList = useAppSelector((state) => state.todoList.value);
+
   return (
     <div className="todo-list">
       <AddTodo />
-      <Todo />
-      <Todo />
+      {todoList.map((todo) => (
+        <TodoItem key={todo.id} item={todo} />
+      ))}
     </div>
   );
 };
