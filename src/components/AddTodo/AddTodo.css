@@ -1,10 +1,10 @@
 .add-todo {
   background: #f5f6f7;
   width: 30rem;
-  height: 8rem;
+  height: 10rem;
   margin: auto;
   margin-top: 1rem;
-  padding: 1rem;
+  padding: 3rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +22,21 @@
   border-radius: 0.3rem;
 }
 
+.add-todo textarea {
+  font-family: inherit;
+  flex: 1;
+  display: block;
+  resize: none;
+  margin: auto;
+  margin-bottom: 0.5rem;
+  width: 20rem;
+  padding: 0.5rem;
+  border: 1px solid #333;
+  border-radius: 0.3rem;
+}
+
 .add-todo button {
+  cursor: pointer;
   width: 21rem;
   padding: 0.7rem;
   border: 1px solid #333;
